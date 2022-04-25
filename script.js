@@ -3,7 +3,7 @@ const cells = document.querySelectorAll('.cell');
 const msg = document.querySelector('.msg');
 let turn;
 let winner;
-// 
+//  Check row
 function checkRow(c0, c1, c2) {
   const cText = [c0, c1, c2].map((cell) => cell.textContent);
   return [cText[0], cText[1], cText[2]].every((cText) => cText === cText[0]);
@@ -20,7 +20,7 @@ function setTurn(xo) {
   turn = !turn || turn === 'y' ? 'x' : 'y';
   msg.textContent = `${turn} turn`;
 }
-// Y or X wins message promt
+// Y or X wins message prompt
 cells.forEach((cell) => cell.addEventListener('click', () => {
   if (!winner && !cell.textContent) {
     cell.textContent = turn === 'x' ? 'X' : 'Y';
