@@ -1,0 +1,47 @@
+    body {
+      display: flex;
+    }
+  
+    body * {
+      box-sizing: border-box;
+    }
+  
+    .tic-tac-toe {
+      position: relative;
+      display: inline-block;
+      margin: auto;
+      border: 1px solid;
+    }
+  
+    .row {
+      display: flex;
+    }
+  
+    .cell {
+      width: 64px;
+      height: 64px;
+      line-height: 64px;
+      text-align: center;
+      border: 1px solid;
+      cursor: pointer;
+    }
+  
+    .cell:hover {
+      background-color: lightgray;
+    }
+  
+    .msg {
+      position: absolute;
+      bottom: 0;
+      transform: translateY(100%);
+      margin: 0;
+      padding: 8px;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .winner {
+      color: green;
+      font-weight: bold;
+    }
+ 
